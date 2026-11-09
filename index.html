@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>CLV Detailing | Car Detailing Auckland</title>
 <script>document.documentElement.classList.add("js")</script>
-<meta name="description" content="CLV Detailing: interior and exterior cleaning, waxing, and cutting and polishing, with a ceramic coating add-on, in Auckland. Open Saturdays and Sundays.">
+<meta name="description" content="CLV Detailing: interior and exterior cleaning, waxing, cut and polish, and ceramic coating packages in Auckland. Open Saturdays and Sundays.">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f4f6f2;--surface:#ffffff;--text:#0b0d0c;--muted:#59635a;--line:#dfe5da;--accent:#3f8a0a;--lime:#6fd11f;
@@ -65,6 +65,13 @@ h2 em{font-style:normal;color:var(--accent)}
 .center{text-align:center}
 .addon{border-top:2px dashed var(--line);margin-top:18px;padding-top:14px;font-size:16px;color:var(--muted)}
 .addon b{color:var(--accent)}
+.tier{font-family:"Barlow Condensed",Arial,sans-serif;font-weight:700;letter-spacing:4px;font-size:15px;color:var(--accent);text-transform:uppercase;margin-bottom:4px}
+.was{font-family:"Barlow Condensed",Arial,sans-serif;font-weight:700;font-size:22px;color:var(--muted);text-decoration:line-through;margin-bottom:2px}
+.card{position:relative}
+.card.feat{background:#0b0d0c;color:#f4f6f2;border-color:#0b0d0c;border-top-color:var(--lime)}
+.card.feat p,.card.feat .was{color:#c7cfc7}.card.feat .price,.card.feat .tier{color:var(--lime)}
+.save{position:absolute;top:-14px;right:18px;background:var(--lime);color:#0b0d0c;font-family:"Barlow Condensed",Arial,sans-serif;font-weight:800;letter-spacing:2px;font-size:16px;padding:5px 12px}
+.extras{margin:22px 0 0;font-size:17px}.extras b{color:var(--accent)}
 footer{background:#0b0d0c;color:#9aa49a;padding:44px 0;text-align:center}
 footer .row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;font-family:"Barlow Condensed",Arial,sans-serif;font-size:24px;letter-spacing:2px;color:#f4f6f2;text-transform:uppercase}
 footer a{text-decoration:none}
@@ -153,7 +160,7 @@ input:focus,select:focus,textarea:focus{outline:3px solid var(--lime);outline-of
 <div class="today" id="today"></div>
 <div class="hero-body">
 <h1>Showroom shine, <em>every weekend.</em></h1>
-<p>Interior and exterior cleaning, waxing and cutting &amp; polishing, with ceramic coating available as an add-on. Your car cared for properly, so it looks and feels brand new.</p>
+<p>Interior and exterior cleaning, waxing and cutting &amp; polishing, plus our ceramic coating package. Your car cared for properly, so it looks and feels brand new.</p>
 <div class="callout">Please don’t hesitate to call <a href="tel:+64226076036">022 607 6036</a> for any questions.</div>
 <div class="stack">
 <a class="btn" href="#signup">Get started</a>
@@ -219,11 +226,11 @@ input:focus,select:focus,textarea:focus{outline:3px solid var(--lime);outline-of
 </div>
 <p class="hint">&larr; Drag to compare &rarr;</p>
 <div class="chips" id="chips" role="group" aria-label="Choose a service">
-<button type="button" data-s="int" aria-pressed="false">Interior</button>
 <button type="button" data-s="ext" aria-pressed="true">Exterior</button>
-<button type="button" data-s="wax" aria-pressed="false">Waxing</button>
+<button type="button" data-s="int" aria-pressed="false">Interior</button>
+<button type="button" data-s="wax" aria-pressed="false">Wax</button>
 <button type="button" data-s="pol" aria-pressed="false">Cut &amp; polish</button>
-<button type="button" data-s="cer" aria-pressed="false">Ceramic add-on</button>
+<button type="button" data-s="cer" aria-pressed="false">Ceramic package</button>
 </div>
 <div class="panel" aria-live="polite"><h3 id="ph"></h3><p id="pp"></p><a href="#builder">Add it to your quote &rarr;</a></div>
 <p class="cap">Illustration of an Audi RS Q3 style SUV. It is not a photo of a real job.</p>
@@ -237,7 +244,7 @@ input:focus,select:focus,textarea:focus{outline:3px solid var(--lime);outline-of
 <div class="pts">
 <div class="pt"><div><h3>Weekend appointments</h3><p>Saturdays and Sundays, booked to suit you.</p></div></div>
 <div class="pt"><div><h3>Inside and out</h3><p>From vacuuming and glass to foam wash and wheels.</p></div></div>
-<div class="pt"><div><h3>Paint care</h3><p>Cutting &amp; polishing and wax, with ceramic coating available as an add-on.</p></div></div>
+<div class="pt"><div><h3>Paint care</h3><p>Cut &amp; polish, wax and our full ceramic coating package.</p></div></div>
 <div class="pt"><div><h3>Quality products</h3><p>A careful process with no shortcuts.</p></div></div>
 <div class="pt"><div><h3>Before &amp; after photos</h3><p>So you can see the difference we made.</p></div></div>
 <div class="pt"><div><h3>Honest quotes</h3><p>A fair price based on your car’s size and condition.</p></div></div>
@@ -261,16 +268,17 @@ input:focus,select:focus,textarea:focus{outline:3px solid var(--lime);outline-of
 <section class="alt" id="services">
 <div class="wrap">
 <div class="shead">
-<div><div class="eyebrow">Prices from</div><h2>Our <em>services</em></h2></div>
-<a class="btn" href="#signup">Get a quote today</a>
+<div><div class="eyebrow">Packages</div><h2>Our <em>prices</em></h2></div>
+<a class="btn" href="#signup">Book now</a>
 </div>
 <div class="grid">
-<div class="card"><h3>Interior cleaning</h3><p>Vacuum, wipe-down, glass and a deep clean of seats, carpets and trim.</p><div class="price"><small>FROM</small>$150</div></div>
-<div class="card"><h3>Exterior cleaning</h3><p>Foam wash, wheels and decontamination so the paint is truly clean.</p><div class="price"><small>FROM</small>$110</div></div>
-<div class="card"><h3>Waxing</h3><p>Deep gloss and a protective layer that makes water bead and dirt rinse off.</p><div class="price"><small>FROM</small>$60</div></div>
-<div class="card"><h3>Cutting &amp; polishing</h3><p>Removes swirls and light scratches to bring back clarity and shine.</p><div class="price"><small>FROM</small>$400</div><div class="addon">Add <b>ceramic coating for +$500</b> on top of your cut &amp; polish. Long-lasting, glossy, easy-to-clean protection.</div></div>
+<div class="card"><div class="tier">Tier 1 &middot; Essential</div><h3>Exterior</h3><p>Foam wash, wheels and decontamination so the paint is truly clean.</p><div class="price">$110</div></div>
+<div class="card"><div class="tier">Tier 2 &middot; Full detail</div><h3>Inside &amp; out</h3><p>A full interior and exterior detail. Your car cleaned properly, inside and out.</p><div class="price">$260</div></div>
+<div class="card"><div class="tier">Tier 3 &middot; Gloss</div><h3>Cut &amp; polish</h3><p>Includes a full exterior wash and clay bar clean to remove minor contaminants, then a cut &amp; polish to bring back clarity and shine.</p><div class="was">Was $540</div><div class="price">$480</div></div>
+<div class="card feat"><span class="save">SAVE $200</span><div class="tier">Tier 4 &middot; Ultimate</div><h3>Ceramic package</h3><p>Full wash, cut &amp; polish and ceramic coating. Long-lasting, glossy, easy-to-clean protection.</p><div class="was">Was $1150</div><div class="price">$950</div></div>
 </div>
-<p class="note">Prices in NZD, excl. GST, for small to medium cars. Combine interior and exterior for a full detail from $220. Large vehicles, heavy soiling and call-out may cost extra.</p>
+<p class="extras">Extras: <b>Interior only $150</b> &middot; <b>Wax $60</b></p>
+<p class="note">Prices vary depending on vehicle size and condition. Prices in NZD, excl. GST. Book online below or call 022 607 6036.</p>
 <div class="center"><a class="btn" href="#signup">Get started</a></div>
 </div>
 </section>
@@ -283,11 +291,12 @@ input:focus,select:focus,textarea:focus{outline:3px solid var(--lime);outline-of
 <div class="qb">
 <div><span class="lbl">Vehicle size</span><div class="seg" id="qsize"><button type="button" class="on" data-m="1">Small / medium</button><button type="button" data-m="1.25">Large (SUV / ute)</button></div></div>
 <div><span class="lbl">Services</span><div class="tiles" id="qtiles">
-<button type="button" class="tile" aria-pressed="false" data-k="int" data-p="150" data-v="Interior cleaning">Interior cleaning<b>$150</b></button>
-<button type="button" class="tile" aria-pressed="false" data-k="ext" data-p="110" data-v="Exterior cleaning">Exterior cleaning<b>$110</b></button>
-<button type="button" class="tile" aria-pressed="false" data-k="wax" data-p="60" data-v="Waxing">Waxing<b>$60</b></button>
-<button type="button" class="tile" aria-pressed="false" data-k="pol" data-p="400" data-v="Cutting and polishing">Cutting &amp; polishing<b>$400</b></button>
-<button type="button" class="tile" aria-pressed="false" data-k="cer" data-p="500" data-v="Ceramic coating add-on (+$500, with cutting and polishing)" disabled>Ceramic coating add-on<b>+$500</b><i>Pick cutting &amp; polishing first</i></button>
+<button type="button" class="tile" aria-pressed="false" data-k="ext" data-p="110" data-v="Tier 1: Exterior">Tier 1 &middot; Exterior<b>$110</b></button>
+<button type="button" class="tile" aria-pressed="false" data-k="full" data-p="260" data-v="Tier 2: Full detail (inside and out)">Tier 2 &middot; Full detail<b>$260</b></button>
+<button type="button" class="tile" aria-pressed="false" data-k="pol" data-p="480" data-v="Tier 3: Cut and polish">Tier 3 &middot; Cut &amp; polish<b>$480</b><i>Was $540</i></button>
+<button type="button" class="tile" aria-pressed="false" data-k="cer" data-p="950" data-v="Tier 4: Ceramic package">Tier 4 &middot; Ceramic package<b>$950</b><i>Was $1150</i></button>
+<button type="button" class="tile" aria-pressed="false" data-k="int" data-p="150" data-v="Interior only">Interior only<b>$150</b></button>
+<button type="button" class="tile" aria-pressed="false" data-k="wax" data-p="60" data-v="Wax">Wax<b>+$60</b></button>
 </div></div>
 <div class="total"><small>Estimated total, excl. GST</small><div class="amt" id="qamt">$0</div><div class="fine" id="qhint">Pick a service to get started.</div></div>
 <button type="button" class="btn" id="qbook">Book this</button>
@@ -305,7 +314,8 @@ input:focus,select:focus,textarea:focus{outline:3px solid var(--lime);outline-of
 <details><summary>Do you come to me?</summary><p>Yes, we come to you. Tell us your suburb when you book.</p></details>
 <details><summary>How do I get a quote?</summary><p>Build one above, tap Get started, or call 022 607 6036. We confirm your price based on your car’s size and condition.</p></details>
 <details><summary>How long does a detail take?</summary><p>It depends on your car, its condition and the services you choose. We’ll give you a time estimate with your quote.</p></details>
-<details><summary>What is the ceramic coating add-on?</summary><p>A long-lasting, glossy protective layer applied after cutting &amp; polishing, for +$500.</p></details>
+<details><summary>What is the ceramic package?</summary><p>Our top tier: a full wash, cut &amp; polish and ceramic coating, a long-lasting, glossy protective layer. $950 (was $1150).</p></details>
+<details><summary>Why might my price be different?</summary><p>Prices vary depending on your vehicle’s size and condition. We confirm your final price before we start.</p></details>
 </div>
 </div>
 </section>
@@ -336,11 +346,12 @@ input:focus,select:focus,textarea:focus{outline:3px solid var(--lime);outline-of
 </div>
 <div><span class="lbl">Services you’re interested in</span>
 <div class="chk">
-<label><input type="checkbox" name="svc" value="Interior cleaning">Interior cleaning</label>
-<label><input type="checkbox" name="svc" value="Exterior cleaning">Exterior cleaning</label>
-<label><input type="checkbox" name="svc" value="Waxing">Waxing</label>
-<label><input type="checkbox" name="svc" value="Cutting and polishing">Cutting &amp; polishing</label>
-<label><input type="checkbox" name="svc" value="Ceramic coating add-on (+$500, with cutting and polishing)">Ceramic coating add-on (+$500)</label>
+<label><input type="checkbox" name="svc" value="Tier 1: Exterior">Tier 1 &middot; Exterior ($110)</label>
+<label><input type="checkbox" name="svc" value="Tier 2: Full detail (inside and out)">Tier 2 &middot; Full detail ($260)</label>
+<label><input type="checkbox" name="svc" value="Tier 3: Cut and polish">Tier 3 &middot; Cut &amp; polish ($480)</label>
+<label><input type="checkbox" name="svc" value="Tier 4: Ceramic package">Tier 4 &middot; Ceramic package ($950)</label>
+<label><input type="checkbox" name="svc" value="Interior only">Interior only ($150)</label>
+<label><input type="checkbox" name="svc" value="Wax">Wax (+$60)</label>
 </div></div>
 <div class="two">
 <div><label for="fdate">Preferred date (Saturday or Sunday)</label><input type="date" id="fdate"></div>
@@ -375,8 +386,7 @@ document.getElementById('today').innerHTML=(wd==='Saturday'||wd==='Sunday')?'<b>
 var tiles=[].slice.call(document.querySelectorAll('#qtiles .tile')),segs=[].slice.call(document.querySelectorAll('#qsize button')),m=1,shown=0,amt=document.getElementById('qamt'),hint=document.getElementById('qhint');
 function on(t){return t.getAttribute('aria-pressed')==='true';}
 function tween(to){var from=shown,t0=null;function step(ts){if(t0===null)t0=ts;var k=Math.min((ts-t0)/400,1);shown=Math.round(from+(to-from)*k);amt.textContent='$'+shown;if(k<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
-function calc(){var pol=tiles.filter(function(t){return t.dataset.k==='pol';})[0],cer=tiles.filter(function(t){return t.dataset.k==='cer';})[0];
-cer.disabled=!on(pol);if(!on(pol))cer.setAttribute('aria-pressed','false');
+function calc(){
 var sum=0,n=0;tiles.forEach(function(t){if(on(t)){sum+=+t.dataset.p;n++;}});
 tween(Math.round(sum*m));hint.textContent=n?(n+(n>1?' services':' service')+' selected'+(m>1?' · large vehicle':'')):'Pick a service to get started.';}
 tiles.forEach(function(t){t.addEventListener('click',function(){t.setAttribute('aria-pressed',on(t)?'false':'true');calc();});});
@@ -405,7 +415,7 @@ var r=document.getElementById('wipe');if(!r)return;
 var rr=document.getElementById('revr'),dv=document.getElementById('div'),kn=document.getElementById('knob'),ar=document.getElementById('arr');
 function set(){var x=820*(r.value/100);rr.setAttribute('width',x);dv.setAttribute('x1',x);dv.setAttribute('x2',x);kn.setAttribute('cx',x);ar.setAttribute('transform','translate('+(x-410)+' 0)');}
 r.addEventListener('input',set);set();
-var info={int:['Interior cleaning','Vacuum, wipe-down, glass and a deep clean of seats, carpets and trim. From $150.'],ext:['Exterior cleaning','Foam wash, wheels and decontamination so the paint is truly clean. From $110.'],wax:['Waxing','Deep gloss and a protective layer that makes water bead. From $60.'],pol:['Cutting & polishing','Removes swirls and light scratches. The fine swirl marks show up on the car. From $400.'],cer:['Ceramic coating add-on','Long-lasting, glossy protection on top of a cut & polish. Water beads and rolls off. +$500.']};
+var info={int:['Interior','Vacuum, wipe-down, glass and a deep clean of seats, carpets and trim. Interior only $150, or $260 for a full inside-and-out detail.'],ext:['Tier 1 · Exterior','Foam wash, wheels and decontamination so the paint is truly clean. $110.'],wax:['Wax','Deep gloss and a protective layer that makes water bead. +$60.'],pol:['Tier 3 · Cut & polish','Full exterior wash and clay bar clean, then a cut & polish to remove swirls and light scratches. $480 (was $540).'],cer:['Tier 4 · Ceramic package','Full wash, cut & polish and ceramic coating. Long-lasting, glossy protection. $950 (was $1150).']};
 var car=document.getElementById('car'),bs=[].slice.call(document.querySelectorAll('#chips button'));
 function pick(k){car.setAttribute('data-s',k);bs.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.s===k?'true':'false');});document.getElementById('ph').textContent=info[k][0];document.getElementById('pp').textContent=info[k][1];}
 bs.forEach(function(b){b.addEventListener('click',function(){pick(b.dataset.s);});});pick('ext');
